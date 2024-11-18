@@ -7,13 +7,17 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<main class="main bg-no-repeat bg-center bg-cover justify-center md:flex-col"
-  style="background-image: url({{images['bg']}});">
+<main class="main bg-no-repeat bg-center bg-cover md:flex-col" style="background-image: url({{images['bg']}});">
   <navbar class="md:w-full" />
-  <div class="content p-1">
-    <div class="left-side">
-      <h1 class="text-outline-width-[2px] text-outline-color-[#000000] font-bold text-white">{{ title }}</h1>
-      <image [image]="images['admissions']" />
+  <div class="flex">
+    <div class="flex-[0.2] h-lvh w-full">
+      <sidebar />
+    </div>
+    <div class="flex flex-[0.8] h-full">
+      <div class="p-4">
+        <h1 class="text-outline-width-[2px] text-outline-color-[#000000] font-bold text-white">{{ title }}</h1>
+        <image [image]="images['admissions']" />
+      </div>
     </div>
   </div>
 </main>
