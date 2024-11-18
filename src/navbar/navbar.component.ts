@@ -26,6 +26,9 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class NavbarComponent {
   textboxes = {
     About: ["About the School", "Apply to the School", "Exhibitions", "Publications", "News", "Public Events"],
-    "Newsletters/calendars": ["Sign up fo School of Art newsletters"]
+    "Newsletters/calendars": ["Sign up for School of Art newsletters", "Community Calendar", "Academic Calendar", "Public Events Calendar", "SoA in the World Calendar"],
+    "Quick Links": ["Current Students", "Faculty & Staff", "Wiki Sitemap", "Knowledgebase", "Facilities", "Courses", "Opportunities", "Resources", "School of Art in the World"]
   }
+
+  hovering: string[] | null = null
 }

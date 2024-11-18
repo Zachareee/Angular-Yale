@@ -1,4 +1,4 @@
-<div>
+<div (mouseleave)="hovering = null">
   <div
     class="md:hidden justify-center w-7 absolute top-0 left-0 bg-white px-1 border-[1.5px] border-slate-400 rounded-lg"
     id="hamburger">
@@ -6,8 +6,12 @@
   </div>
   <div class="flex divide-x-2 border-2 border-slate-600 hidden md:flex bg-white">
     <div id="nav" *ngFor="let arr of textboxes | keyvalue"
-      class="p-1 border-slate-600 flex-auto flex basis-0 justify-center text-xl font-semibold hover:cursor-pointer hover:bg-yellow-200 active:bg-rose-200">
+      class="p-1 border-slate-600 flex-auto flex basis-0 justify-center text-xl font-semibold hover:cursor-pointer hover:bg-yellow-200"
+      (mouseover)="hovering = arr.value">
       <span>{{arr.key}}</span>
     </div>
+  </div>
+  <div *ngIf="hovering" class="grid grid-cols-3 bg-white text-blue-500 text-lg text-center border-2 items-center">
+    <span *ngFor="let x of hovering" class="py-2">{{x}}</span>
   </div>
 </div>
