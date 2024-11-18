@@ -30,5 +30,8 @@ export class NavbarComponent {
     "Quick Links": ["Current Students", "Faculty & Staff", "Wiki Sitemap", "Knowledgebase", "Facilities", "Courses", "Opportunities", "Resources", "School of Art in the World"]
   }
 
+  clickHamburger() {
+    document.getElementById("categories")?.classList.toggle("hidden")
+  }
   hovering: string[] | null = null
 }
