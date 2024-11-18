@@ -7,12 +7,12 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<navbar />
-<main class="main bg-no-repeat bg-center bg-cover" style="background-image: url({{images['bg']}});">
-  <div class="content">
+<main class="main bg-no-repeat bg-center bg-cover justify-center md:flex-col"
+  style="background-image: url({{images['bg']}});">
+  <navbar class="md:w-full" />
+  <div class="content p-1">
     <div class="left-side">
-      <h1 class="font-outline-1">Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <h1 class="text-outline-width-[1px] text-outline-color-[#f87171]">{{ title }}</h1>
       <image [image]="images['admissions']" />
     </div>
   </div>

@@ -24,5 +24,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   //]
 })
 export class NavbarComponent {
-  textboxes = ["Hello", "byebye"]
+  textboxes = {
+    About: ["About the School", "Apply to the School", "Exhibitions", "Publications", "News", "Public Events"],
+    "Newsletters/calendars": ["Sign up fo School of Art newsletters"]
+  }
 }
