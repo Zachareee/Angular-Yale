@@ -12,5 +12,8 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 export class AppComponent {
   title = 'Yale School of Art';
-  image = "https://cdn.filestackcontent.com/resize=width:525/output=format:jpg/JeS4GuttRz29r2ntLEpr"
+  images: Record<string, string> = {
+    admissions: "https://cdn.filestackcontent.com/resize=width:525/output=format:jpg/JeS4GuttRz29r2ntLEpr",
+    bg: "https://cdn.filestackcontent.com/1lXM9r0HTeSlAL9onqql"
+  }
 }
