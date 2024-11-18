@@ -9,13 +9,14 @@
 
 <main class="main bg-no-repeat bg-center bg-cover md:flex-col" style="background-image: url({{images['bg']}});">
   <navbar class="md:w-full" />
-  <div class="flex">
-    <div class="flex-[0.2] h-lvh w-full">
+  <div class="md:flex">
+    <div class="p-4 md:h-lvh md:w-fit md:p-0">
       <sidebar [tags]="tags" />
     </div>
-    <div class="flex flex-[0.8] h-full">
+    <div class="flex flex-1 h-full">
       <div class="p-4">
-        <h2 *ngFor="let tag of tags" id="{{tag}}">{{tag}}</h2>
+        <h2 *ngFor="let tag of tags" id="{{tag}}"
+          class="text-white text-outline-width-[2px] text-outline-color-[#000000] font-bold text-5xl">{{tag}}</h2>
         <h1 class="text-outline-width-[2px] text-outline-color-[#000000] font-bold text-white">{{ title }}</h1>
         <image [image]="images['admissions']" />
       </div>

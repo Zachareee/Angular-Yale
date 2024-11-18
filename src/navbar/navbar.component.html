@@ -14,7 +14,7 @@
     </div>
   </div>
   <div *ngIf="hovering"
-    class="grid grid-cols-3 bg-white text-blue-500 text-lg text-center border-2 hover:cursor-pointer place-content-stretch">
-    <span *ngFor="let x of hovering" class="py-2 border-2">{{x}}</span>
+    class="grid grid-cols-3 bg-white text-blue-500 text-lg text-center border-2 absolute w-full place-content-stretch">
+    <span *ngFor="let x of hovering" class="py-2 border-2 hover:cursor-pointer hover:bg-yellow-200">{{x}}</span>
   </div>
 </div>
