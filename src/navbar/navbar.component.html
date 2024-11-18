@@ -8,13 +8,13 @@
   <div id="categories"
     class="divide-x-2 border-2 border-slate-600 hidden bg-white absolute w-full h-screen top-0 left-0 md:h-fit md:flex md:relative">
     <div *ngFor="let arr of textboxes | keyvalue"
-      class="p-1 border-slate-600 flex-auto flex basis-0 justify-center text-xl font-semibold hover:cursor-pointer hover:bg-yellow-200"
+      class="p-1 border-slate-600 flex-auto flex basis-0 justify-center text-xl font-semibold hover:bg-yellow-200 select-none"
       (mouseover)="hovering = arr.value">
       <span>{{arr.key}}</span>
     </div>
   </div>
   <div *ngIf="hovering"
-    class="grid grid-cols-3 bg-white text-blue-500 text-lg text-center border-2 place-content-stretch">
+    class="grid grid-cols-3 bg-white text-blue-500 text-lg text-center border-2 hover:cursor-pointer place-content-stretch">
     <span *ngFor="let x of hovering" class="py-2 border-2">{{x}}</span>
   </div>
 </div>
