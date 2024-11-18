@@ -11,10 +11,11 @@
   <navbar class="md:w-full" />
   <div class="flex">
     <div class="flex-[0.2] h-lvh w-full">
-      <sidebar />
+      <sidebar [tags]="tags" />
     </div>
     <div class="flex flex-[0.8] h-full">
       <div class="p-4">
+        <h2 *ngFor="let tag of tags" id="{{tag}}">{{tag}}</h2>
         <h1 class="text-outline-width-[2px] text-outline-color-[#000000] font-bold text-white">{{ title }}</h1>
         <image [image]="images['admissions']" />
       </div>

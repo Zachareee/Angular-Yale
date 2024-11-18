@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'sidebar',
@@ -9,5 +10,12 @@ import { Component } from "@angular/core";
 })
 
 export class SidebarComponent {
-  tags = ["HAPPENING AT SOA", "COMMUNITY BULLETIN BOARD", "CALENDARS & NEWSLETTERS"]
+  constructor(private router: Router) { }
+
+  @Input() tags!: string[]
+  encode = encodeURIComponent
+
+  scrollToFrag(fragment: string) {
+    this.router.navigateByUrl(`#${fragment}`)
+  }
 }
